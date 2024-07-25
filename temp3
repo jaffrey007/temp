@@ -1,0 +1,64 @@
+import json
+
+# Define the path to your JSON file
+json_file_path = 'One_splite.json'
+search_strings_file_path = 'search_strings.txt'
+# Open and read the JSON file
+with open(json_file_path, 'r') as file:
+    json_data = file.read()
+# Read the search strings from the file
+
+with open(search_strings_file_path, 'r') as file:
+    search_strings = [line.strip() for line in file]
+
+# Parse the JSON string into a Python dictionary
+data = json.loads(json_data)
+
+# Initialize an empty list to store the 'procInst' values
+proc_inst_values = []
+
+# GetProcess func. Traverse the nested JSON structure to find the 'procInst' values
+def traverse_json(obj):
+    if isinstance(obj, dict):
+        if "id" in obj and obj["id"] == "procInst":
+            proc_inst_values.append(obj["value"])
+        else:
+            for value in obj.values():
+                traverse_json(value)
+    elif isinstance(obj, list):
+        for item in obj:
+            traverse_json(item)
+
+# Call the traverse_json function with the top-level JSON object
+
+# 
+def contains_string(data, search_string):
+    # 如果是字典，遍历每个键值对
+    if isinstance(data, dict):
+        # print("this is a dict")
+        for key, value in data.items():
+            if contains_string(value, search_string):  # 递归调用
+                return True
+    # 如果是列表，遍历每个元素
+    elif isinstance(data, list):
+        # print("this is a list")
+        for item in data:
+            if contains_string(item, search_string):  # 递归调用
+                return True
+    # 如果是字符串，检查是否包含目标字符串
+    elif isinstance(data, str):
+        # print("this is a str")
+        return search_string in data
+    return False  # 如果没有找到，返回 False
+
+for obj in data:
+    for search_string in search_strings:
+        contains_string(data,search_string)
+        traverse_json(obj)
+# # Check if any 'procInst' values were found
+# if proc_inst_values:
+#     # If so, print the values separated by newlines
+#     print("\n".join(proc_inst_values))
+# else:
+#     # If not, print a message indicating that 'procInst' was not found
+#     print("'procInst' key not found.")
