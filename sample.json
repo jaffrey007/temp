@@ -1,0 +1,62 @@
+[
+    {
+        "id" : "aba21e3d-6e25-40aa-b052-cfc0db18b031",
+        "name": "test1",
+        "value": "localhost",
+        "details": [
+            {
+                "id": "processes",
+                "value": "udevd",
+                "details": [
+                    {
+                        "id": "procOwnFilterEnabled",
+                        "value": "0",
+                        "details": null,
+                        "secure": false,
+                        "mapDetails": {
+                            "/procOwnFilterEnabled": "0"
+                        }
+                    }
+                ],
+                "secure": false,
+                "mapDetails": {
+                    "/processes/udevd/procOwnFilterEnabled": "0"
+                }
+            }
+        ],
+        "secure": false,
+        "mapDetails": {
+            "/HOSTS/localhost/processes/udevd/procOwnFilterEnabled": "0"
+        }
+    },
+    {
+        "id" : "aba88adc-6e25-40aa-b052-cfc0db18b031",
+        "name": "test2",
+        "value": "localhost",
+        "details": [
+            {
+                "id": "processes",
+                "value": "udevd",
+                "details": [
+                    {
+                        "id": "procPpid1FilterEnabled",
+                        "value": "0",
+                        "details": null,
+                        "secure": false,
+                        "mapDetails": {
+                            "/procPpid1FilterEnabled": "0"
+                        }
+                    }
+                ],
+                "secure": false,
+                "mapDetails": {
+                    "/processes/udevd/procPpid1FilterEnabled": "0"
+                }
+            }
+        ],
+        "secure": false,
+        "mapDetails": {
+            "/HOSTS/localhost/processes/udevd/procPpid1FilterEnabled": "0"
+        }
+    }
+]
