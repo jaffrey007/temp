@@ -9,7 +9,7 @@
                 "value": "udevd",
                 "details": [
                     {
-                        "id": "procOwnFilterEnabled",
+                        "id": "processes",
                         "value": "0",
                         "details": null,
                         "secure": false,
