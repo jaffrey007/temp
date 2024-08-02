@@ -39,7 +39,7 @@
                 "value": "udevd",
                 "details": [
                     {
-                        "id": "procPpid1FilterEnabled",
+                        "id": "processes",
                         "value": "0",
                         "details": null,
                         "secure": false,
