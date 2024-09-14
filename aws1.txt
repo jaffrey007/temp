@@ -1,0 +1,274 @@
+There are 3 perspective options for AWS CAF
+1-Business
+2-People
+3-Governance
+
+
+
+Amazon Athena is a serverless, interactive query service provided by AWS that allows users to analyze data in Amazon S3 using standard SQL. Here are some key features and benefits of Amazon Athena:
+
+
+
+A. AWS Support: Provides technical support plans, but not focused on hands-on migration assistance.
+
+B. AWS Professional Services: Global team of experts for hands-on assistance with planning, executing, and optimizing AWS migrations.
+
+C. AWS Launch Wizard: Simplifies application deployment, but not specifically designed for third-party application migrations.
+
+D. AWS Managed Services (AMS): Fully managed service for ongoing operational support, not designed for the initial migration phase.
+
+beanstalk是一种paas服务
+
+
+Amazon Redshift
+Scenario: Data Warehousing and Analytics
+
+
+Amazon Athena
+Scenario: Interactive Querying of Data in S3
+
+Amazon Kinesis
+Scenario: Real-time Data Streaming and Processing
+
+
+CAF cloud adoption framework:
+
+Data architecture => Platform
+Event management => Operations
+Cloud fluency => People
+Strategic partnership => Business
+
+
+
+A. AWS Security Hub
+B. AWS Trusted Advisor
+C. Amazon EventBridge
+D. Amazon GuardDuty
+
+
+
+Amazon Macie is a fully managed data security and privacy service offered by AWS. It uses machine learning and pattern matching to discover, classify, and protect sensitive data stored in Amazon S3
+
+
+AWS snowmobile: large data migration to AWS
+AWS LOCAL ZONES: low-latency applications
+AWS OUTPOSTs: Hybrid cloud deployment
+AWS fargate: serverless container management.
+
+
+
+
+Here are scenarios for using AWS Business Support, AWS Basic Support, AWS Developer Support, and AWS Enterprise Support:
+
+### A. **AWS Basic Support**
+
+**Scenario: Small Business Getting Started**
+- **Use Case**: A small startup is launching its first application on AWS and needs basic guidance.
+- **Implementation**:
+  - The startup opts for AWS Basic Support, which provides access to AWS documentation, whitepapers, and the AWS Support Center.
+  - They use the resources available to troubleshoot common issues and learn about best practices for deploying applications on AWS.
+  - The startup benefits from the basic level of support without incurring additional costs, allowing them to focus on building their product.
+
+### B. **AWS Developer Support**
+
+**Scenario: Application Development and Testing**
+- **Use Case**: A development team is building a new application and requires technical support during the development phase.
+- **Implementation**:
+  - The team subscribes to AWS Developer Support to gain access to AWS Trusted Advisor, which provides best practices and recommendations.
+  - They can open support cases for guidance on AWS services, API usage, and troubleshooting issues during development.
+  - The support team assists them with best practices for optimizing their application’s performance and cost efficiency.
+
+### C. **AWS Business Support**
+
+**Scenario: Growing E-commerce Platform**
+- **Use Case**: An e-commerce company is scaling rapidly and needs reliable support for its AWS environment.
+- **Implementation**:
+  - The company subscribes to AWS Business Support to ensure they have 24/7 access to AWS support engineers.
+  - They utilize the support to quickly resolve issues that arise during peak traffic periods, such as Black Friday sales.
+  - The company also benefits from proactive guidance on architecture optimization and cost management, ensuring a smooth customer experience.
+
+### D. **AWS Enterprise Support**
+
+**Scenario: Large Financial Institution**
+- **Use Case**: A large financial institution requires comprehensive support for its critical applications running on AWS.
+- **Implementation**:
+  - The institution subscribes to AWS Enterprise Support for access to a dedicated Technical Account Manager (TAM) who provides personalized guidance and support.
+  - They receive proactive architectural reviews, operational reviews, and best practices tailored to their specific needs.
+  - In addition, the institution can access training resources and workshops to enhance their team's AWS skills, ensuring they meet compliance and security requirements.
+
+### Summary
+
+- **AWS Basic Support** is suitable for small businesses just starting with AWS, providing access to documentation and basic resources.
+
+- **AWS Developer Support** is designed for development teams needing technical assistance during application development and testing.
+
+- **AWS Business Support** is ideal for growing businesses that require 24/7 support and proactive guidance for scaling their operations.
+
+- **AWS Enterprise Support** offers comprehensive and personalized support for large organizations with critical applications, including dedicated account management and tailored resources.
+
+These scenarios illustrate how each support plan can be effectively utilized based on the specific needs and scale of the organization.
+
+
+
+
+在 AWS 的背景下，**安全组（Security Group）**是有状态的，而**网络访问控制列表（Network ACL，简称 NACL）**是无状态的。
+
+### 有状态与无状态的定义
+
+- **有状态（Stateful）**：
+  - 有状态的防火墙会跟踪连接状态。这意味着，如果你允许某个入站流量（如从外部访问你的实例），相应的出站流量会自动被允许，无需单独配置。
+  - 例如，在安全组中，如果你允许某个 IP 地址的入站流量，AWS 会自动允许从该实例到该 IP 地址的出站流量。
+
+- **无状态（Stateless）**：
+  - 无状态的防火墙不会跟踪连接状态。每个请求都需要单独的规则来允许入站和出站流量。
+  - 例如，在 NACL 中，如果你允许某个 IP 地址的入站流量，你还需要单独配置出站流量规则，才能允许从该实例回传数据。
+
+### 总结
+
+- **安全组**：有状态，自动处理返回流量。
+- **网络 ACL**：无状态，需要单独配置入站和出站规则。
+
+
+AWS Cost and Usage Reports 粒度要比cost exploer 要细一点！
+
+
+diff between cognito and IAM identity cernter:
+
+Amazon Cognito is best for application-level user authentication and management, while AWS IAM Identity Center is focused on centralized access management for AWS resources and applications.
+Choose Cognito for user-centric applications and IAM Identity Center for managing access across AWS accounts and services.
+
+
+aws config: track, record, and audit con􀂬guration changes made to AWS resources
+aws shield: ddos attach
+aws iam: access and privilege management for aws resources.
+amazon inspector: vulnerbility for ec2
+
+
+one-demand instance are billed based on seconds!
+
+
+AWS Control Tower is a higher-level service that provides a framework for setting up and governing multi-account environments with built-in best practices, guardrails, and a user-friendly dashboard.
+
+AWS Organizations focuses on account management, billing, and permission management without built-in governance features.(无内置的治理功能)
+
+
+
+
+
+Here are brief explanations of scenarios for each of the listed AWS services:
+
+1. **AWS Personal Health Dashboard**:
+   - Provides personalized alerts and remediation guidance when AWS events may impact your resources, helping you stay informed about issues that could affect your applications.
+
+2. **AWS Systems Manager**:
+   - Enables you to automate operational tasks across your AWS resources, such as patch management, configuration management, and monitoring, to enhance efficiency and compliance.
+
+3. **AWS Trusted Advisor**:
+   - Offers real-time guidance to help you optimize your AWS environment by providing recommendations on cost savings, performance improvements, security enhancements, and fault tolerance.
+
+4. **AWS Service Health Dashboard**:
+   - Displays the overall health of AWS services and regions, allowing you to monitor service availability and performance issues that may affect your applications.
+
+5. **AWS Service Catalog**:
+   - Allows organizations to create and manage catalogs of IT services that are approved for use on AWS, enabling self-service provisioning and governance of cloud resources.
+
+Here are brief scenarios for each of the listed AWS services:
+
+1. **AWS Lambda**:
+   - Ideal for running event-driven applications, AWS Lambda allows you to execute code in response to events (like S3 uploads or DynamoDB updates) without provisioning or managing servers.
+
+2. **AWS Fargate**:
+   - AWS Fargate enables you to run containerized applications without managing the underlying infrastructure, making it perfect for deploying microservices or applications that require scalability and flexibility.
+
+3. **AWS Application Composer**:
+   - AWS Application Composer provides a visual interface to design and build serverless applications by connecting AWS services, simplifying the development process for complex architectures.
+
+4. **AWS App Runner**:
+   - AWS App Runner allows developers to quickly deploy and run web applications and APIs directly from source code or container images, handling all the underlying infrastructure management automatically.
+
+
+AWS Infrastructure Event Management (IEM) Support is a specialized service provided by AWS to help customers prepare for and manage significant events that may impact their AWS infrastructure, such as product launches, marketing campaigns, or seasonal traffic spikes.
+
+
+C. S3 Standard-Infrequent Access (S3 Standard-IA),have redundancy
+D. S3 One Zone-Infrequent Access (S3 One Zone-IA), no redundancy. one az.data could regenerate!!!
+
+
+
+AWS CAF emphasizes the organizational and operational changes required for successful cloud adoption. It addresses people, processes, and technology.
+
+AWS Migration Hub focuses on the execution of the migration process, including tracking individual applications, servers, and databases as they move to AWS.
+
+
+AWS Budgets allows users to set custom cost and usage budgets that alert you when you exceed your thresholds. It provides visibility into your AWS spending and helps you manage costs effectively.
+
+Amazon EventBridge: This is primarily a serverless event bus service that enables you to connect applications using events, not specifically designed for cost monitoring.
+
+Compute Savings Plans: These are a flexible pricing model that allows you to save on your compute costs but do not provide alerting capabilities.
+
+Migration Evaluator: This tool helps assess and plan migrations to AWS but is not focused on monitoring operational costs
+
+
+AWS Snow Family (which includes AWS Snowcone and AWS Snowball) is designed for edge computing and data transfer. It allows users to collect, store, and process data in environments without internet connectivity. Once the data is collected, it can be physically shipped to AWS for upload to the cloud.
+
+AWS Outposts: This service extends AWS infrastructure to on-premises locations but is not specifically designed for remote data collection in the field.
+
+AWS Transfer Family: This service is used for transferring files over the internet using SFTP, FTP, and FTPS, which would not be suitable for locations without connectivity.
+
+AWS Migration Hub: This is focused on tracking migrations to AWS, not on data collection in remote locations.
+
+
+
+AWS Direct Connect: Establishes dedicated network connections from your on-premises data centers to AWS. It can enhance network
+performance, reduce latency, and provide a more reliable connection compared to public internet connections. AWS Direct Connect is specificall
+designed for creating private and dedicated connections between on-premises infrastructure and AWS resources.
+
+AWS PrivateLink: Designed for secure and scalable access to AWS services directly from your VPC without traversing the public internet. It's
+particularly useful when you want to access AWS services from your VPC without using public IP addresses and want to keep the traffic within the
+AWS network.
+
+
+
+AWS DataSync: designed for transferring large amounts of data between on-premises storage and AWS services, providing in-flight encryption and data validation capabilities to ensure data integrity during the transfer.
+
+AWS Application Migration Service: Primarily focused on migrating applications rather than unstructured data.
+
+Amazon Elastic File System (Amazon EFS): A file storage service but does not handle data migration securely on its own.
+
+AWS Migration Hub: Provides a central location to track migration progress(track migration progress) but does not facilitate data transfer.
+
+
+
+Migrations service for AWS:
+
+Sure! Here’s a brief introduction to each of the AWS migration services:
+
+1. **AWS Application Migration Service**: 
+   This service simplifies and automates the migration of applications to AWS by converting them to run natively on AWS without requiring changes to the application code.
+
+2. **AWS Database Migration Service (DMS)**: 
+   DMS helps migrate databases to AWS quickly and securely. It supports homogenous and heterogeneous migrations, allowing for continuous data replication with minimal downtime.
+
+3. **AWS Server Migration Service (SMS)**: 
+   SMS automates the migration of on-premises workloads to AWS. It allows users to schedule and manage the replication of server volumes to AWS, making it easier to migrate large numbers of servers.
+
+4. **AWS DataSync**: 
+   DataSync is used for transferring large amounts of data between on-premises storage and AWS services like Amazon S3 and Amazon EFS. It provides secure, automated, and accelerated data transfer.
+
+5. **AWS Snowball**: 
+   Snowball is a physical device that helps transfer large amounts of data to AWS securely. It is useful for moving data when network bandwidth is limited or when large datasets need to be transferred quickly.
+
+6. **AWS Transfer Family**: 
+   This service enables secure file transfer into and out of Amazon S3 using protocols like SFTP, FTPS, and FTP, making it easier to integrate file transfer workflows.
+
+7. **AWS Migration Hub**: 
+   Migration Hub provides a central location to track the progress of application migrations across multiple AWS and partner solutions, offering visibility and management capabilities.
+
+8. **AWS CloudEndure Migration**: 
+   CloudEndure Migration automates and simplifies the migration of applications from any source infrastructure to AWS, providing continuous replication and quick cutover with minimal downtime.
+
+These services collectively facilitate various aspects of migration, ensuring a smooth transition to the AWS cloud.
+
+
+Amazon Comprehend is the AWS service that can be used for natural language processing tasks, including text classification. It can analyze and
+understand the content of electronic books to automatically classify them based on their contents.
